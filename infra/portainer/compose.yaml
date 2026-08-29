@@ -1,0 +1,17 @@
+services:
+  portainer:
+    image: portainer/portainer-ce:lts
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    networks:
+      - proxy
+
+volumes:
+  portainer_data:
+
+networks:
+  proxy:
+    external: true
+    name: homeops-proxy

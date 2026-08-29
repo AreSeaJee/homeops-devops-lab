@@ -1,4 +1,13 @@
 http://demo.home.arpa {
-    encode zstd gzip
-    reverse_proxy homeops-demo:8080
+	encode zstd gzip
+	reverse_proxy homeops-demo:8080
+}
+
+http://portainer.home.arpa {
+	encode zstd gzip
+	reverse_proxy https://portainer:9443 {
+		transport http {
+			tls_insecure_skip_verify
+		}
+	}
 }

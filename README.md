@@ -57,7 +57,8 @@ docker compose down
 ├── compose.yaml    # Runtime configuration and healthcheck
 ├── .dockerignore   # Minimal Docker build context
 └── infra/
-    └── reverse-proxy/ # LAN-only Caddy entrypoint
+    ├── reverse-proxy/ # LAN-only Caddy entrypoint
+    └── portainer/     # Docker management UI
 ```
 
 ## Roadmap
@@ -66,7 +67,7 @@ docker compose down
 - [ ] Server foundation: GitHub, reverse proxy, Portainer, monitoring
   - [x] Public GitHub showcase repository
   - [x] LAN-only Caddy reverse proxy
-  - [ ] Portainer
+  - [x] Portainer
   - [ ] Availability monitoring
 - [ ] V0.2: Continuous integration build
 - [ ] V0.3: Versioned image in GitHub Container Registry
