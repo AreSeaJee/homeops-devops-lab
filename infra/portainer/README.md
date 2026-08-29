@@ -17,6 +17,11 @@ Open `http://portainer.home.arpa` and create the initial administrator account.
 Use a unique password that is not stored in this repository. Then select the
 local Docker environment.
 
+The `--trusted-origins` option is restricted to the LAN hostname. Caddy also
+preserves the browser-facing `Host` header when connecting to Portainer's
+internal HTTPS endpoint, allowing Portainer's CSRF validation to compare the
+request host and origin correctly.
+
 ## Security boundary
 
 The Docker socket gives Portainer extensive control over the host's containers,

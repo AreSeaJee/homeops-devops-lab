@@ -1,6 +1,9 @@
 services:
   portainer:
     image: portainer/portainer-ce:lts
+    command:
+      - --trusted-origins
+      - http://portainer.home.arpa
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

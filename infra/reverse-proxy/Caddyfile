@@ -6,6 +6,7 @@ http://demo.home.arpa {
 http://portainer.home.arpa {
 	encode zstd gzip
 	reverse_proxy https://portainer:9443 {
+		header_up Host {hostport}
 		transport http {
 			tls_insecure_skip_verify
 		}
