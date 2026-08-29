@@ -55,13 +55,19 @@ docker compose down
 ├── VERSION         # Single source of application version
 ├── Dockerfile      # Reproducible container image
 ├── compose.yaml    # Runtime configuration and healthcheck
-└── .dockerignore   # Minimal Docker build context
+├── .dockerignore   # Minimal Docker build context
+└── infra/
+    └── reverse-proxy/ # LAN-only Caddy entrypoint
 ```
 
 ## Roadmap
 
 - [x] V0.1: Minimal app, Docker image, Compose, healthcheck, visible version
 - [ ] Server foundation: GitHub, reverse proxy, Portainer, monitoring
+  - [x] Public GitHub showcase repository
+  - [x] LAN-only Caddy reverse proxy
+  - [ ] Portainer
+  - [ ] Availability monitoring
 - [ ] V0.2: Continuous integration build
 - [ ] V0.3: Versioned image in GitHub Container Registry
 - [ ] V0.4: Automated staging deployment on the Debian home server

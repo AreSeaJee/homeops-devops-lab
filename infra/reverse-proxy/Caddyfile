@@ -1,0 +1,4 @@
+http://demo.home.arpa {
+    encode zstd gzip
+    reverse_proxy homeops-demo:8080
+}
