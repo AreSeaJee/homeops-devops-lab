@@ -1,0 +1,11 @@
+[Unit]
+Description=Pull and deploy the latest healthy HomeOps demo image
+Documentation=https://github.com/AreSeaJee/homeops-devops-lab
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/Documents/Devops-Setup
+ExecStart=%h/Documents/Devops-Setup/scripts/deploy.sh latest
+TimeoutStartSec=10min

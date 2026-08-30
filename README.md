@@ -79,6 +79,9 @@ docker compose down
 - [x] V0.2: Continuous integration build
 - [x] V0.3: Versioned image in GitHub Container Registry
 - [ ] V0.4: Automated staging deployment on the Debian home server
+  - [x] Pull-based deployment script with health verification
+  - [x] Automatic rollback to the previously healthy image
+  - [x] User-level systemd timer installed and verified
 - [ ] V0.5: Integration and API tests
 - [ ] V0.6: Headless browser and exploratory tests
 - [ ] V0.7: Release gate and rollback
