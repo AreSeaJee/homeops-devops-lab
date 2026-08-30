@@ -58,7 +58,8 @@ docker compose down
 ├── .dockerignore   # Minimal Docker build context
 └── infra/
     ├── reverse-proxy/ # LAN-only Caddy entrypoint
-    └── portainer/     # Docker management UI
+    ├── portainer/     # Docker management UI
+    └── uptime-kuma/   # Availability monitoring
 ```
 
 ## Roadmap
@@ -68,7 +69,7 @@ docker compose down
   - [x] Public GitHub showcase repository
   - [x] LAN-only Caddy reverse proxy
   - [x] Portainer
-  - [ ] Availability monitoring
+  - [x] Availability monitoring
 - [ ] V0.2: Continuous integration build
 - [ ] V0.3: Versioned image in GitHub Container Registry
 - [ ] V0.4: Automated staging deployment on the Debian home server

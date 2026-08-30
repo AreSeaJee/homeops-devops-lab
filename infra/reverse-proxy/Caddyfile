@@ -8,3 +8,9 @@ http://portainer.home.arpa {
 	log
 	reverse_proxy portainer:9000
 }
+
+http://status.home.arpa {
+	encode zstd gzip
+	log
+	reverse_proxy uptime-kuma:3001
+}
