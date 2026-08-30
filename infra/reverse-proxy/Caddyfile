@@ -14,3 +14,9 @@ http://status.home.arpa {
 	log
 	reverse_proxy uptime-kuma:3001
 }
+
+http://supabase.home.arpa {
+	encode zstd gzip
+	log
+	reverse_proxy supabase-envoy:8000
+}

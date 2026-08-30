@@ -59,7 +59,8 @@ docker compose down
 └── infra/
     ├── reverse-proxy/ # LAN-only Caddy entrypoint
     ├── portainer/     # Docker management UI
-    └── uptime-kuma/   # Availability monitoring
+    ├── uptime-kuma/   # Availability monitoring
+    └── supabase/      # Self-hosted web-app backend test platform
 ```
 
 ## Roadmap
@@ -70,6 +71,7 @@ docker compose down
   - [x] LAN-only Caddy reverse proxy
   - [x] Portainer
   - [x] Availability monitoring
+  - [x] Supabase test-platform foundation
 - [ ] V0.2: Continuous integration build
 - [ ] V0.3: Versioned image in GitHub Container Registry
 - [ ] V0.4: Automated staging deployment on the Debian home server

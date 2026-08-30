@@ -1,0 +1,14 @@
+services:
+  api-gw:
+    ports: !reset []
+    networks:
+      - default
+      - proxy
+
+  supavisor:
+    ports: !reset []
+
+networks:
+  proxy:
+    external: true
+    name: homeops-proxy
