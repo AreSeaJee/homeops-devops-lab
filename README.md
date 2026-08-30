@@ -5,7 +5,7 @@ documents the path from a minimal containerized application to a monitored
 delivery platform with CI/CD, a container registry, staging, tests, releases,
 and rollback.
 
-## Current milestone: V0.1 Docker baseline
+## Current milestone: V0.3 CI and container registry
 
 The repository currently contains a dependency-free Python demo application
 with three HTTP endpoints:
@@ -55,6 +55,10 @@ docker compose down
 ├── VERSION         # Single source of application version
 ├── Dockerfile      # Reproducible container image
 ├── compose.yaml    # Runtime configuration and healthcheck
+├── tests/          # Dependency-free application tests
+├── deploy/         # Pull-based GHCR deployment configuration
+├── scripts/        # Controlled server deployment entrypoint
+├── .github/        # GitHub Actions CI and image publication
 ├── .dockerignore   # Minimal Docker build context
 └── infra/
     ├── reverse-proxy/ # LAN-only Caddy entrypoint
@@ -72,8 +76,8 @@ docker compose down
   - [x] Portainer
   - [x] Availability monitoring
   - [x] Supabase test-platform foundation
-- [ ] V0.2: Continuous integration build
-- [ ] V0.3: Versioned image in GitHub Container Registry
+- [x] V0.2: Continuous integration build
+- [x] V0.3: Versioned image in GitHub Container Registry
 - [ ] V0.4: Automated staging deployment on the Debian home server
 - [ ] V0.5: Integration and API tests
 - [ ] V0.6: Headless browser and exploratory tests

@@ -1,0 +1,26 @@
+services:
+  homeops-demo:
+    image: ${HOMEOPS_IMAGE:-ghcr.io/areseajee/homeops-devops-lab}:${HOMEOPS_TAG:-latest}
+    init: true
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"
+    networks:
+      - proxy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - >-
+          import urllib.request;
+          urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2)
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+networks:
+  proxy:
+    external: true
+    name: homeops-proxy
