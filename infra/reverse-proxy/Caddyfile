@@ -20,3 +20,9 @@ http://supabase.home.arpa {
 	log
 	reverse_proxy supabase-envoy:8000
 }
+
+http://app.home.arpa {
+	encode zstd gzip
+	log
+	reverse_proxy forge-of-becoming:3000
+}
