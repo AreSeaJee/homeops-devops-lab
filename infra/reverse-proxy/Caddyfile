@@ -26,3 +26,19 @@ http://app.home.arpa {
 	log
 	reverse_proxy forge-of-becoming:3000
 }
+
+http://cloud.home.arpa {
+	encode zstd gzip
+	log
+	reverse_proxy nextcloud-aio-apache:11000
+}
+
+http://cloud-admin.home.arpa {
+	encode zstd gzip
+	log
+	reverse_proxy https://nextcloud-aio-mastercontainer:8080 {
+		transport http {
+			tls_insecure_skip_verify
+		}
+	}
+}
