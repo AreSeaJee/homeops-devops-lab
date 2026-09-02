@@ -11,7 +11,10 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     networks:
-      - proxy
+      proxy: {}
+      nextcloud-aio:
+        aliases:
+          - cloud.home.arpa
 
 volumes:
   caddy_data:
@@ -21,3 +24,6 @@ networks:
   proxy:
     external: true
     name: homeops-proxy
+  nextcloud-aio:
+    external: true
+    name: nextcloud-aio
