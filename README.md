@@ -67,6 +67,10 @@ docker compose down
     └── supabase/      # Self-hosted web-app backend test platform
 ```
 
+Nightly backups of Supabase, Storage, Portainer, Uptime Kuma, and local runtime
+configuration are documented in [`docs/backups.md`](docs/backups.md). Nextcloud
+uses its separate AIO-managed Borg backup.
+
 ## Roadmap
 
 - [x] V0.1: Minimal app, Docker image, Compose, healthcheck, visible version
@@ -82,6 +86,7 @@ docker compose down
   - [x] Pull-based deployment script with health verification
   - [x] Automatic rollback to the previously healthy image
   - [x] User-level systemd timer installed and verified
+- [x] Nightly external-disk backups with retention and integrity checks
 - [ ] V0.5: Integration and API tests
 - [ ] V0.6: Headless browser and exploratory tests
 - [ ] V0.7: Release gate and rollback

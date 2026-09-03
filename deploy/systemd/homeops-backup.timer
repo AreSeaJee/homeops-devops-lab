@@ -1,0 +1,12 @@
+[Unit]
+Description=Run the HomeOps backup every night
+
+[Timer]
+OnCalendar=*-*-* 03:15:00
+Persistent=true
+RandomizedDelaySec=15m
+Unit=homeops-backup.service
+
+[Install]
+WantedBy=timers.target
+

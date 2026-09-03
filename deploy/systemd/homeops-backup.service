@@ -1,0 +1,14 @@
+[Unit]
+Description=Back up HomeOps services to the external disk
+RequiresMountsFor=/mnt/backup
+After=docker.service mnt-backup.automount
+Wants=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/areseajee/Documents/Devops-Setup/scripts/backup-homeops.sh
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+PrivateTmp=true
+
