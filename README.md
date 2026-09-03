@@ -70,7 +70,7 @@ docker compose down
 ## Roadmap
 
 - [x] V0.1: Minimal app, Docker image, Compose, healthcheck, visible version
-- [ ] Server foundation: GitHub, reverse proxy, Portainer, monitoring
+- [x] Server foundation: GitHub, reverse proxy, Portainer, monitoring
   - [x] Public GitHub showcase repository
   - [x] LAN-only Caddy reverse proxy
   - [x] Portainer
@@ -78,7 +78,7 @@ docker compose down
   - [x] Supabase test-platform foundation
 - [x] V0.2: Continuous integration build
 - [x] V0.3: Versioned image in GitHub Container Registry
-- [ ] V0.4: Automated staging deployment on the Debian home server
+- [x] V0.4: Automated staging deployment on the Debian home server
   - [x] Pull-based deployment script with health verification
   - [x] Automatic rollback to the previously healthy image
   - [x] User-level systemd timer installed and verified
